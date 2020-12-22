@@ -52,3 +52,12 @@ var position = names.indexOf('Obiwan');
 log(position); // found returns actual index
 var position = names.lastIndexOf('Obiwan');
 log(position); // found returns actual index
+
+let fruits = ['Apple', 'Banana'];
+fruits.push('Mango');
+log(fruits.indexOf('Banana'));
+
+let shallowCopy = fruits.slice(); // this is how to make a shallow copy
+log(shallowCopy);
+
+log(Array.isArray(fruits));
