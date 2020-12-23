@@ -1,0 +1,5 @@
+../node_modules/
+/package-lock.json
+
+./01_Javascript_From_Start/node_modules/
+./01_Javascript_From_Start/package-lock.json
