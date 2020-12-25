@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crossorigin Attributes</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" crossorigin="anonymous" />
+    <style>
+      img,
+      picture,
+      video,
+      audio {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Crossorigin Attributes</h1>
+    </header>
+    <main>
+      <p>
+        <img
+          src="//picsum.photos/500/300"
+          crossorigin="anonymous"
+          alt="picsum photo"
+        />
+      </p>
+      <p>
+        <video controls crossorigin="use-credentials">
+          <source src="" type="" />
+        </video>
+      </p>
+      <p>
+        <audio controls crossorigin="use-credentials">
+          <source src="" type="" />
+        </audio>
+      </p>
+    </main>
+    <script
+      src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"
+      crossorigin="use-credentials"
+    ></script>
+  </body>
+</html>
