@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Drop-Down Lists</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 20px;
+        line-height: 1.6;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+        color: #878787;
+      }
+      *,
+      *::before,
+      *:after {
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        margin: 1rem auto;
+        max-width: 1000px;
+      }
+      h2 {
+        padding: 1rem;
+      }
+      select,
+      option,
+      datalist,
+      input,
+      label,
+      button {
+        font-size: 1.5rem;
+        color: inherit;
+      }
+
+      p.form-box {
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .form-box option:default {
+        color: red;
+      }
+      .form-box label {
+        flex-basis: 20%;
+        flex-shrink: 0;
+      }
+      .form-box input {
+        flex-basis: 80%;
+        padding: 0 1rem;
+      }
+      .form-box button {
+        flex-basis: auto;
+        padding: 0 1rem;
+        margin-left: 20%;
+        border-radius: 20px;
+      }
+
+      datalist {
+        font-size: 2rem;
+      }
+      datalist option {
+        font-size: 2rem;
+      }
+      option {
+        font-size: 2rem;
+      }
+
+      .form-box select {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        line-height: 2.5rem;
+        height: 2.5rem;
+        width: 100%;
+        color: white;
+      }
+      .list {
+        background-color: deepskyblue;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 2.5rem;
+        padding: 0 1rem;
+        flex-basis: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>HTML Dropdown Lists and DataLists</h2>
+      <form name="my-form" action="#">
+        <p class="form-box">
+          <label for="region" title="State or Territory">Region</label>
+          <span class="list">
+            <select id="region" name="region">
+              <optgroup label="States">
+                <option value="new-south-wales">New South Wales</option>
+                <option value="queensland">Queensland</option>
+                <option value="south-australia">South Australia</option>
+                <option selected value="tasmania">Tasmania</option>
+                <option value="victoria">Victoria</option>
+                <option value="western-australia">Western Australia</option>
+              </optgroup>
+              <optgroup label="Territories">
+                <option value="ashmore-cartier-islands">
+                  Ashmore and Cartier Islands
+                </option>
+                <option value="australian-capital-territory">
+                  Australian Capital Territory
+                </option>
+                <option value="australian-antarctic-territory">
+                  Australian Antarctic Territory
+                </option>
+                <option value="christmas-island">Christmas Island</option>
+                <option value="cocos-keeling-islands">
+                  Cocos (Keeling) Islands
+                </option>
+                <option value="coral-sea-islands">Coral Sea Islands</option>
+                <option value="heard-island-mcdonald-island">
+                  Heard Island and Mcdonald Island
+                </option>
+                <option value="jervis-bay-territory">
+                  Jervis Bay Territory
+                </option>
+                <option value="norfolk-territory">Norfolk Territory</option>
+                <option value="northern-territory">Northern Territory</option>
+              </optgroup>
+            </select>
+          </span>
+        </p>
+        <p class="form-box">
+          <label for="city">City</label>
+          <input id="city" name="city" list="cities" />
+        </p>
+        <p class="form-box">
+          <button id="btnSend">Click Me</button>
+        </p>
+      </form>
+
+      <datalist id="cities">
+        <option value="Adelade" />
+        <option value="Brisbane" />
+        <option value="Melbourne" />
+        <option value="Canberra" />
+        <option value="Darwin" />
+        <option value="Hobart" />
+        <option value="Perth" />
+        <option value="Sydney" />
+      </datalist>
+    </main>
+    <!--
+<span class="list"></span>
+    -->
+  </body>
+</html>
