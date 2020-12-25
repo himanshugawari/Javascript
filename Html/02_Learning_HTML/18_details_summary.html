@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details and Summary Elements</title>
+    <style>
+      summary::-webkit-details-marker {
+        color: red;
+      }
+      ::marker {
+        color: gold; /* FF */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        <code>details &amp; summary elements</code>
+      </p>
+      <details>
+        <summary>Heading</summary>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias
+          maiores ipsa qui totam, ea unde quisquam tenetur? Voluptatum magni
+          magnam alias eaque laborum, dolore praesentium veniam molestias harum
+          hic.
+        </p>
+      </details>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          let p = document.querySelector('main>p');
+          p.addEventListener('click', (ev) => {
+            console.log('paragraph clicked');
+            let det = document.querySelector('details');
+            if (det.hasAttribute('open')) {
+              // det.removeAttribute("open");
+              det.open = false;
+            } else {
+              // det.setAttribute("open", "open");
+              det.open = true;
+            }
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>
