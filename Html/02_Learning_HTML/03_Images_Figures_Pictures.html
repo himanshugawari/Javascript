@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Images, Pictures, and Figures</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Images, Pictures, and Figures</h1>
+    </header>
+    <main>
+      <p><img src="avatar.png" alt="deadpool" /></p>
+      <p>
+        <figure>
+          <img src="archer-bob.jpg" alt="Bob Belcher and Sterling Archer" />
+          <figcaption>Bob Belcher and Sterling Archer</figcaption>
+        </figure>
+      </p>
+      <p>
+        <picture>
+          <source srcset="archer-bob.jpg" media="(min-width: 800px)" />
+          <source srcset="avatar.png" media="(max-width: 600px)" />
+          <img src="http://picsum.photos/300/200/" alt="fallback" />
+        </picture>
+      </p>
+    </main>
+  </body>
+</html>
